@@ -16,3 +16,31 @@
  @import "bootstrap";
  @import 'font-awesome-sprockets';
  @import 'font-awesome';
+ 
+ ul {
+  list-style: none;
+}
+
+.header {
+ padding-left: 10px;
+ padding-right: 10px;
+}
+
+//.text-title {
+// text-align:center;
+// display:block;
+//}
+
+//.text {
+// text-align:left;
+// display: inline-block;
+//}
+
+
+p {
+ padding-bottom: 10px;
+}
+
+.field {
+ padding-bottom: 10px;
+}

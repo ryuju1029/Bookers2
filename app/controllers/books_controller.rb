@@ -1,5 +1,4 @@
-class BookesController < ApplicationController
-
+class BooksController < ApplicationController
     def create
     end
 
