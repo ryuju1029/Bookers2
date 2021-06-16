@@ -5,7 +5,7 @@ class UsersController < ApplicationController
 
     def update
     end
-
+    
     def index
         @books = Book.all
     end
