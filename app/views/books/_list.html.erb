@@ -1,0 +1,36 @@
+<div class="main container">
+   <div class="side bar row">
+     <div class="col-lg-3">
+      <h1>User info</h1>
+       <div class="profile_image">
+        <%= attachment_image_tag user,:profile_image,:fill,60,60,fallback:"no_image.jpg"%>  <!-- @user -> user -->
+       </div>
+        <table class="table">
+            <tr>
+                <td>name</td>
+                <td><%= user.name %></td>
+            </tr>
+            <tr>
+                <td>introduction</td>
+                <td><%= user.introduction %></td>
+            </tr>
+        </table>
+
+        <div>
+          <a class="btn btn-outline-secondary btn-block fas fa-user-cog edit_user_91" href="/users/:id/edit"></a>
+        </div>
+        <div class="New book">
+          <h1 class="mt-3">New book</h1>
+            <%= form_with model: book, local:true do |f| %> <!-- @book -> book -->
+             <div class="book_title">
+              <div class="title">Title</div>
+              <%= f.text_field :title %>
+             </div>
+             <div class="book_opinion">
+              <div class="opinion">Opinion</div>
+              <%= f.text_area :body %><br>
+             </div>
+              <input type="submit" name="commit" value="Create Book" class="btn btn-success" data-disable-with="Create Book">
+            <% end %>
+        </div>
+     </div>

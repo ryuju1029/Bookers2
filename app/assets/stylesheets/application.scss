@@ -16,7 +16,7 @@
  @import "bootstrap";
  @import 'font-awesome-sprockets';
  @import 'font-awesome';
- 
+
  ul {
   list-style: none;
 }
@@ -49,18 +49,22 @@
 }
 
 tr {
- border-bottom: 1px solid gainsboro;
-}
-
-.profile_image {
- border-bottom: 1px solid gainsboro;
+ border-top: 1px solid #dee2e6;
 }
 
 .user_name {
- border-bottom: 1px solid gainsboro;
  padding-top: 10px;
 }
 
-td {
- padding: 10px 10px 10px 10px;
+.table {
+ margin-bottom: 1rem;
 }
+
+label {
+ display: inline-block;
+}
+
+.title, .opinion, .book_title, .book_opinion {
+ padding-bottom: 10px;
+}
+ 

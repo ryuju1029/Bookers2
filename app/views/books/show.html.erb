@@ -1,0 +1,19 @@
+
+<%= render 'books/list',book:@book,user:@user %>
+
+<div class="main content col-lg-8">
+
+          <h1 class="Book_contents">Book detail</h1>
+           <table class="table table-hover table-inverse">
+            <tbody>
+             <% @book.each do |book| %>
+               <tr>
+
+                 <td><%= book.title %></a></td>
+                 <td><%= book.body %></td>
+                 </td>
+               </tr>
+             <% end %>
+            </tbody>
+           </table>
+</div>
