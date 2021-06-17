@@ -1,1 +1,23 @@
-<h1>users index</h1>
+
+<%= render 'books/list', book: @new_book, user: @current_user %>
+
+<div class="main content col-lg-8">
+  <h1>Users</h1>
+    <table class="table table-hover table-inverse">
+            <thead>
+               <tr>
+                <th>image</th><th>name</th><th colspan="3"></th>
+               </tr>
+            </thead>
+            <tbody>
+            　<% @users.each do |user| %>
+               <tr>
+                 <td><%= attachment_image_tag user,:profile_image,:fill,40,40,fallback:"no_image.jpg",size:'40x40' %></td>
+                 <td><%= user.name %></td>
+                 <td><%= link_to "show", user_path(user) %></td>
+                 </td>
+               </tr>
+              <% end %>
+            </tbody>
+           </table>
+</div>
