@@ -1,11 +1,14 @@
 class UsersController < ApplicationController
 
     def edit
-
+        @user = User.find(params[:id])
     end
 
     def update
-    end
+        @user = User.find(params[:id])
+        @user.update(user_params)
+        redirect_to user_path(@user)
+    end 
 
     def index
         @user =  current_user.id
