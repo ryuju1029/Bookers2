@@ -2,7 +2,6 @@ class UsersController < ApplicationController
 
     before_action :authenticate_user!
     before_action :ensure_correct_user, only: [:edit,:update]
-    before_action :set_user, only: [:show, :edit, :update, :destroy, :followings, :followers]
 
     def edit
          @user = User.find(params[:id])
@@ -42,6 +41,7 @@ class UsersController < ApplicationController
         @user = User.find(params[:id])
         @users = @user.followers
     end
+
 
     private
 
