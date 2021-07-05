@@ -12,17 +12,19 @@ Rails.application.routes.draw do
    resources :book_comments, only: [:create, :destroy]
   end
 
-  resources :users, only: [:index, :show, :edit, :update]
-
+  resources :users, only: [:index, :show, :edit, :update] 
+    
   scope '(:locale)' do
     resources :books
-    resources :users, except: :create do
-      member do
-        get :followeds, :followers
-      end
+    
+    resources :users do
+    member do
+      get :following, :followers
     end
+    end
+    
     resource :user_icons, only: :destroy
     resources :relationships, only: [:create, :destroy]
-  end
+    end
 
 end
