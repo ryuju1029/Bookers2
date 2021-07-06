@@ -35,19 +35,9 @@
                  <td><%= book.body %></td>
                  </td>
                  <td>
-                  <% if book.favorites_by?(current_user) %>
-                   <p>
-                    <%= link_to book_favorites_path(book),method: :delete do %>
-                     ♥<%= book.favorites.count %>
-                    <% end %>
-                   </p>
-                  <% else %>
-                   <p>
-                    <%= link_to book_favorites_path(book),method: :post do %>
-                    ♡<%= book.favorites.count %>
-                    <% end %>
-                   </p>
-                  <% end %>
+                  <div id="book_<%= book.id %>">
+                   <%= render 'books/like', book: book %>
+                  </div>
                  </td>
                  <td>
                   <p>

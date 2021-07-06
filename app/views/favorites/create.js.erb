@@ -1,0 +1,4 @@
+
+
+$('#book_<%= @book.id %>').html("<%= j(render partial: 'books/like', locals: { book: @book }) %>");
+
