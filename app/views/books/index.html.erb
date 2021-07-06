@@ -13,7 +13,10 @@
 
     <div class="main content col-md-8 offset-md-1">
 
+     <%= render 'books/serches' %>
+
     <h1>Books</h1>
+
     <table class="table table-hover table-inverse">
             <thead>
                <tr>
@@ -50,7 +53,7 @@
                   <p>
                    コメントの数：
                    <%= book.book_comments.count %>
-                  </p> 
+                  </p>
                  </td>
                </tr>
               <% end %>
